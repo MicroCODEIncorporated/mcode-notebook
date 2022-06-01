@@ -24,7 +24,7 @@ This application was built on Microsoft Word and includes a Normal.dotm (Word Te
 
 ## Installing
 
-* Backup your Normal.dotm -- in case you've made changes your unaware of now.
+* Backup your Normal.dotm -- in case you've made changes you're unaware of now.
 * Replace your existing Normal.dotm file with the included...
 
 ```
