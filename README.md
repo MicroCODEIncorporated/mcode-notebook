@@ -31,7 +31,7 @@ This application was built on Microsoft Word and includes a Normal.dotm (Word Te
 C:\Documents and Settings\<Your Name>\Application Data\Microsoft\Templates\Normal.dotm
 ```
 
-* In Microsoft Word assign the Keycords for teh supplied macrors.
+* In Microsoft Word assign the Keycords for the supplied macrors.
 * The directions for doing this are on the last couple pages of the notebook template file.
 
 <p align="left"><img src=".\NB_Install.png" width="1024" title="Mapping VBA code..."></p>
