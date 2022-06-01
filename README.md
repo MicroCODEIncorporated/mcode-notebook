@@ -9,7 +9,7 @@ This is a tool for taking taking notes, keeping track of Tasks, etc.
 
 ## Demonstration Video of Note taking
 
-* This shows teh result of using the CTRL-ALT-* macros to take notes durng a MIT xPRO class.
+* This shows the result of using the CTRL-ALT-* macros to take notes durng a MIT xPRO class.
 
 <p align="left"><img src=".\NB_Example.png" width="1024" title="Notebook's Appearace..."></p>
 
