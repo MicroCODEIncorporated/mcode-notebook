@@ -7,7 +7,7 @@ A Microsoft Word template (.dotm) with associated Normal.dotm to implement a dai
 This is a tool for taking taking notes, keeping track of Tasks, etc.
 
 
-## Demonstration Video of Note taking
+## Demonstration of Note taking
 
 * This shows the result of using the CTRL-ALT-* macros to take notes durng a MIT xPRO class.
 
