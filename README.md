@@ -1,7 +1,7 @@
 # mcode-notebook
 
 A Microsoft Word template (.dotm) with associated Normal.dotm used to implement 
-a daily 'Electronic Notebook' at MicroCODE Inc.
+a daily Electronic Notebook at MicroCODE Inc.
 
 ## Description
 
