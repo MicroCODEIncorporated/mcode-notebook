@@ -1,6 +1,54 @@
 Attribute VB_Name = "NB_Macros"
 Option Explicit
 
+Sub NB_LineUp()
+'
+' NB_LineUp Macro = CTRL-SHIFT-K
+' Macro written 06/5/2025 by Timothy J McGuire (ChatGPT)
+'
+    Dim startPos As Long, endPos As Long
+    startPos = Selection.Start
+    endPos = Selection.End
+
+    If startPos = 0 Then Exit Sub ' Already at top
+
+    Dim selText As String
+    selText = Selection.Text
+
+    Selection.Cut
+    Selection.MoveUp Unit:=wdLine, Count:=1
+    Dim newStart As Long
+    newStart = Selection.Start
+    Selection.Paste
+
+    ' Restore selection of pasted content
+    Selection.SetRange Start:=newStart, End:=newStart + Len(selText)
+
+End Sub
+
+Sub NB_LineDown()
+'
+' NB_LineDown Macro = CTRL-SHIFT-K
+' Macro written 06/5/2025 by Timothy J McGuire (ChatGPT)
+'
+    Dim startPos As Long, endPos As Long
+    startPos = Selection.Start
+    endPos = Selection.End
+
+    Dim selText As String
+    selText = Selection.Text
+
+    Selection.Cut
+    Selection.MoveDown Unit:=wdLine, Count:=1
+    Selection.MoveDown Unit:=wdLine, Count:=1
+    Dim newStart As Long
+    newStart = Selection.Start
+    Selection.Paste
+
+    ' Restore selection of pasted content
+    Selection.SetRange Start:=newStart, End:=newStart + Len(selText)
+
+End Sub
 Sub NB_NewDay()
 '
 ' NB_NewDay Macro = CTRL-SHIFT-K
@@ -347,5 +395,75 @@ Sub NB_PhoneCall()
 
 End Sub
 
+Sub NBCodeStyle()
+'
+' NBCodeStyle Macro
+'
+'
+    ' don't check spelling
+    Selection.LanguageID = wdEnglishUS
+    Selection.NoProofing = True
+    Application.CheckLanguage = False
+    
+    ' gray background
+    Selection.Shading.Texture = wdTextureNone
+    Selection.Shading.BackgroundPatternColor = 15921906
+    Selection.Font.Shading.BackgroundPatternColor = wdColorAutomatic
+    
+    ' coding font
+    Selection.Font.Name = "ProFontWindows"
+    Selection.Font.Size = 8
+    Selection.Font.Bold = False
+    
+    ' light purple outline
+    With Selection.ParagraphFormat
+    
+        .OutlineLevel = wdOutlineLevelBodyText
+        .Borders(wdBorderHorizontal).LineStyle = wdLineStyleNone
+        
+        With .Borders(wdBorderLeft)
+            .LineStyle = wdLineStyleDot
+            .LineWidth = wdLineWidth050pt
+            .Color = 10498160
+        End With
+        With .Borders(wdBorderRight)
+            .LineStyle = wdLineStyleDot
+            .LineWidth = wdLineWidth050pt
+            .Color = 10498160
+        End With
+        With .Borders(wdBorderTop)
+            .LineStyle = wdLineStyleDot
+            .LineWidth = wdLineWidth050pt
+            .Color = 10498160
+        End With
+        With .Borders(wdBorderBottom)
+            .LineStyle = wdLineStyleDot
+            .LineWidth = wdLineWidth050pt
+            .Color = 10498160
+        End With
+        With .Borders
+            .DistanceFromTop = 1
+            .DistanceFromLeft = 4
+            .DistanceFromBottom = 1
+            .DistanceFromRight = 4
+            .Shadow = False
+        End With
+   End With
+   With Options
+        .DefaultBorderLineStyle = wdLineStyleDot
+        .DefaultBorderLineWidth = wdLineWidth050pt
+        .DefaultBorderColor = 10498160
+    End With
+    
+End Sub
+
+Sub NBPasteText()
+'
+' NBPasteText Macro
+'
+'
+    Selection.PasteAndFormat (wdFormatPlainText)
+    
+End Sub
 
 

@@ -1,6 +1,6 @@
 # mcode-notebook
 
-A Microsoft Word template (.dotm) with associated Normal.dotm used to implement 
+A Microsoft Word template (.dotm) with associated Normal.dotm used to implement
 a daily Electronic Notebook at MicroCODE Inc.
 
 ## Description
@@ -63,6 +63,8 @@ Contributors names and contact info
 
 ## Version History
 
+* 0.2
+    * Added two new macros for ALT-UP, ALT-DOWN selection like VS Code -- 2025
 * 0.1
     * New README.md for publishing in GitHub -- 2022
 * 0.0
